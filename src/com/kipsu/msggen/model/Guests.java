@@ -15,14 +15,6 @@ public class Guests {
 		this.lastName = lastName;
 	}
 
-	public Guests(int index, ArrayList<JSONObject> guestObj)
-	{
-		
-		this.guestID = Long.parseLong(guestObj.get(index).get("id").toString());
-		
-		this.firstName = (String) guestObj.get(index).get("firstName");
-		this.lastName = (String) guestObj.get(index).get("lastName");
-	}
 	public long getGuestID()
 	{
 		return guestID;

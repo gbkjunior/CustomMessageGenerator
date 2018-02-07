@@ -28,16 +28,7 @@ public class MessageTemplate {
 		this.templateID = templateID;
 		this.templateMessage = templateMessage;
 	}
-	public MessageTemplate(int index, ArrayList<JSONObject> messageObject)
-	{
-		this.templateID = (long) messageObject.get(index).get("tID");
-		this.templateMessage = (String) messageObject.get(index).get("templateName");
-	}
-	public MessageTemplate(long index, ArrayList<JSONObject> messageObject)
-	{
-		this.templateID = (int) messageObject.get((int) index).get("tID");
-		this.templateMessage = (String) messageObject.get((int) index).get("templateName");
-	}
+	
 	
 	public String setTemplateMessage()
 	{

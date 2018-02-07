@@ -19,13 +19,7 @@ public class Company {
 	}
 
 	
-	public Company(int index, ArrayList<JSONObject> companyObject)
-	{
-		this.companyID = (long) companyObject.get(index).get("id");
-		this.companyName = (String) companyObject.get(index).get("company");
-		this.city = (String) companyObject.get(index).get("city");
-		this.timeZone = (String) companyObject.get(index).get("timezone");
-	}
+	
 	
 	public long getCompanyID()
 	{

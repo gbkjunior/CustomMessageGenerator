@@ -23,17 +23,6 @@ public class Reservation {
 		this.endTimestamp = endTimestamp;
 	}
 
-	public Reservation (int index, ArrayList<JSONObject> guestObj)
-	{
-		this.guestID = (long) guestObj.get(index).get("id");
-		JSONObject reservation = (JSONObject) guestObj.get(index).get("reservation");
-		
-		this.roomNo = (long) reservation.get("roomNumber");
-		this.startTimestamp = (long) reservation.get("startTimestamp");
-		this.endTimestamp = (long) reservation.get("endTimestamp");
- 		
-		
-	}
 	public long getGuestID()
 	{
 		return guestID;

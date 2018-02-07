@@ -27,7 +27,7 @@ public class TestOutput {
 	public static final String companyfilePath = "resources/Companies.json";
 	public static final String templatefilePath = "resources/template.json";
 	
-	public static ArrayList<JSONObject> addGuestDataFromJSON(ArrayList<JSONObject> responseListGuest) throws IOException, ParseException
+	/*public static ArrayList<JSONObject> addGuestDataFromJSON(ArrayList<JSONObject> responseListGuest) throws IOException, ParseException
 	{
 		try {
 			FileReader fr = new FileReader(guestfilePath);
@@ -85,7 +85,7 @@ public class TestOutput {
 		}
 		return responseListTemplate;
 		
-	}
+	}*/
 	public static void main(String [] args)
 	{
 		
@@ -146,20 +146,30 @@ public class TestOutput {
 		}
 		
 
-		
+		int id_to_Search;
 		
 		Scanner userInput = new Scanner(System.in);
 		System.out.println("Enter the userID:");
-		int id_to_Search = userInput.nextInt();
-		
-		if(id_to_Search <= 0 || id_to_Search > responseListGuest.size())
-		{
-			System.out.println("Id does not exist. Please try again.");
-			id_to_Search = userInput.nextInt();
+		String guestInput = userInput.nextLine();
+		id_to_Search = Integer.parseInt(guestInput);
+		while(!(id_to_Search<=responseListGuest.size()))
+				{
+					if(id_to_Search <= 0 || id_to_Search > responseListGuest.size())
+					{
+						System.out.println("Id does not exist. Please try again.");
+						id_to_Search = userInput.nextInt();
+						
+					}
+				}
+				
 			
-		}
+		
+		
+		
 		System.out.println("Enter the companyID:");
-		int compID = userInput.nextInt();
+		String compInput = userInput.nextLine();
+		
+		int compID = Integer.parseInt(compInput);
 		
 		System.out.println("Do you want to use existing template or do you want to create a custom template? \n Press 1 for existing template. \n Press 2 for creating custom template.");
 		int tempInput = userInput.nextInt();
@@ -173,11 +183,11 @@ public class TestOutput {
 			System.out.println("Enter the templateID:");
 			int tempID = userInput.nextInt();
 			
-			Guests guest = new Guests(id_to_Search - 1,responseListGuest);
+			Guests guest = new Guests(Integer.parseInt(guestInput) - 1,responseListGuest);
 			
 			
-			Reservation resDetails = new Reservation(id_to_Search - 1, responseListGuest);
-			Company company = new Company(compID-1, responseListCompany);
+			Reservation resDetails = new Reservation(Integer.parseInt(guestInput) - 1, responseListGuest);
+			Company company = new Company(Integer.parseInt(compInput)-1, responseListCompany);
 			
 			MessageTemplate mt= new MessageTemplate(tempID-1, responseListTemplate);
 			mt.setGreeting(resDetails, company);
@@ -191,7 +201,7 @@ public class TestOutput {
 		else if(tempInput == 2)
 		{
 			System.out.println("Please use the following metrics as input while creating custom template: ");
-			System.out.println(" Use %Greeting% for getting the time of the day \n Use * for getting first name of the guest. \n Use - for getting hotel name. \n Use $ for getting room number.");
+			System.out.println(" Use %GREETING% for getting the time of the day \n Use %NAME% for getting first name of the guest. \n Use %COMPANY_NAME% for getting hotel name. \n Use %ROOM_NO% for getting room number.");
 			System.out.println("Enter custom message template:");
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			String messTemp = br.readLine();
@@ -221,11 +231,11 @@ public class TestOutput {
 				
 			}
 			
-			Guests guest = new Guests(id_to_Search - 1,responseListGuest);
+			Guests guest = new Guests(Integer.parseInt(guestInput) - 1,responseListGuest);
 			
 			
-			Reservation resDetails = new Reservation(id_to_Search - 1, responseListGuest);
-			Company company = new Company(compID-1, responseListCompany);
+			Reservation resDetails = new Reservation(Integer.parseInt(guestInput) - 1, responseListGuest);
+			Company company = new Company(Integer.parseInt(compInput)-1, responseListCompany);
 			
 			MessageTemplate mt= new MessageTemplate((long) responseListTemplate.size()-1, responseListTemplate);
 			mt.setGreeting(resDetails, company);

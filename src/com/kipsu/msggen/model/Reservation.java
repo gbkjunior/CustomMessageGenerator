@@ -15,6 +15,13 @@ public class Reservation {
 	long startTimestamp;
 	long endTimestamp;
 	
+	public Reservation(long guestID, long roomNo, long startTimestamp, long endTimestamp)
+	{
+		this.guestID = guestID;
+		this.roomNo = roomNo;
+		this.startTimestamp = startTimestamp;
+		this.endTimestamp = endTimestamp;
+	}
 
 	public Reservation (int index, ArrayList<JSONObject> guestObj)
 	{

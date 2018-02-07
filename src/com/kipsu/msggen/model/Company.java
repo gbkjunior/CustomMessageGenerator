@@ -10,7 +10,13 @@ public class Company {
 	String companyName;
 	String city;
 	String timeZone;
-	
+	public Company(long companyID, String companyName, String city, String timeZone)
+	{
+		this.companyID = companyID;
+		this.companyName = companyName;
+		this.city = city;
+		this.timeZone = timeZone;
+	}
 
 	
 	public Company(int index, ArrayList<JSONObject> companyObject)

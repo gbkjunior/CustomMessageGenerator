@@ -8,7 +8,12 @@ public class Guests {
 	String lastName;
 	
 	ArrayList<Guests> guestArray = new ArrayList();
-	
+	public Guests(long guestID, String firstName, String lastName)
+	{
+		this.guestID = guestID;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
 
 	public Guests(int index, ArrayList<JSONObject> guestObj)
 	{
@@ -23,10 +28,7 @@ public class Guests {
 		return guestID;
 	}
 	
-	public String getFirstName(int guestID)
-	{
-		return firstName;
-	}
+
 	public String getFirstName()
 	{
 		return firstName;

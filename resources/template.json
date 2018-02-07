@@ -1,1 +1,26 @@
-[{"templateName":"%Greeting% *, and Welcome to - . Room $ is ready for you. Enjoy your stay and let us know if you need anything.","tID":1},{"templateName":"%Greeting% *, and Welcome to - . Hope you are having a good day. There are quite a few amazing restaurants that you have to try out. Please let us know if you need more information regarding this.","tID":2},{"templateName":"%Greeting% *, We hope you enjoyed your stay in room $ here at -. We are pleased to help you anytime and we would like to improve our standards based on your feedback. Could you spend a minute on it?.","tID":3},{"templateName":"%Greeting% *, how has the day been at room $.","tID":4},{"templateName":"%Greeting% *, How is your stay at room $ ?","tID":5},{"templateName":"%Greeting% * - $ hope you're doing good.","tID":6},{"templateName":"%Greeting% * - $","tID":7}]
+[
+  {
+    "templateMessage": "%GREETING% %NAME%, and Welcome to %COMPANY_NAME% . Room %ROOM_NO% is ready for you. Enjoy your stay and let us know if you need anything.",
+    "tID": 1
+  },
+  {
+    "templateMessage": "%GREETING% %NAME%, and Welcome to %COMPANY_NAME% . Hope you are having a good day. There are quite a few amazing restaurants that you have to try out. Please let us know if you need more information regarding this.",
+    "tID": 2
+  },
+  {
+    "templateMessage": "%GREETING% %NAME%, We hope you enjoyed your stay in room %ROOM_NO% here at %COMPANY_NAME%. We are pleased to help you anytime and we would like to improve our standards based on your feedback. Could you spend a minute on it?.",
+    "tID": 3
+  },
+  {
+    "templateMessage": "%GREETING% %NAME%, how has the day been at room %ROOM_NO%.",
+    "tID": 4
+  },
+  {
+    "templateMessage": "%GREETING% %NAME%, How is your stay at room %ROOM_NO% ?",
+    "tID": 5
+  },
+  {
+    "templateMessage": "%GREETING% %NAME% have a fun day!",
+    "tID": 6
+  }
+]

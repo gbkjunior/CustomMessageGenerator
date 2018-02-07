@@ -19,28 +19,32 @@ public class MessageTemplate {
 	String greeting;
 	String firstName;
 	long templateID;
-	String templateName;
+	String templateMessage;
 	String companyName;
 	long roomNo;
 	
-	
+	public MessageTemplate(long templateID, String templateMessage)
+	{
+		this.templateID = templateID;
+		this.templateMessage = templateMessage;
+	}
 	public MessageTemplate(int index, ArrayList<JSONObject> messageObject)
 	{
 		this.templateID = (long) messageObject.get(index).get("tID");
-		this.templateName = (String) messageObject.get(index).get("templateName");
+		this.templateMessage = (String) messageObject.get(index).get("templateName");
 	}
 	public MessageTemplate(long index, ArrayList<JSONObject> messageObject)
 	{
 		this.templateID = (int) messageObject.get((int) index).get("tID");
-		this.templateName = (String) messageObject.get((int) index).get("templateName");
+		this.templateMessage = (String) messageObject.get((int) index).get("templateName");
 	}
 	
 	public String setTemplateMessage()
 	{
-		String greet = this.templateName.replaceAll("%Greeting%", this.getGreeting());
-		String greet1 = greet.replaceAll("\\*", this.getFirstName());
-		String greet2 = greet1.replaceAll("\\-", this.getCompanyName());
-		String greet3 = greet2.replaceAll("\\$", String.valueOf(this.getRoomNo()));
+		String greet = this.templateMessage.replaceAll("%GREETING%", this.getGreeting());
+		String greet1 = greet.replaceAll("%NAME%", this.getFirstName());
+		String greet2 = greet1.replaceAll("%COMPANY_NAME%", this.getCompanyName());
+		String greet3 = greet2.replaceAll("%ROOM_NO%", String.valueOf(this.getRoomNo()));
 		return greet3;
 	}
 	
@@ -107,7 +111,14 @@ public class MessageTemplate {
 		return greetingID;
 	}
 	
-	
+	public long getTemplateID()
+	{
+		return templateID;
+	}
+	public String getTemplateMessage()
+	{
+		return templateMessage;
+	}
 	public String getGreeting()
 	{
 		return greeting;

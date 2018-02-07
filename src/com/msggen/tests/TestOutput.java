@@ -1,4 +1,4 @@
-package com.kipsu.msggen.tests;
+package com.msggen.tests;
 
 import java.awt.List;
 import java.io.BufferedReader;
@@ -20,10 +20,10 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import com.kipsu.msggen.model.Company;
-import com.kipsu.msggen.model.Guests;
-import com.kipsu.msggen.model.Reservation;
-import com.kipsu.msggen.templates.MessageTemplate;
+import com.msggen.model.Company;
+import com.msggen.model.Guests;
+import com.msggen.model.Reservation;
+import com.msggen.templates.MessageTemplate;
 
 public class TestOutput {
 	public static final String guestfilePath = "resources/Guests.json";

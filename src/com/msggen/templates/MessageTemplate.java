@@ -1,12 +1,12 @@
-package com.kipsu.msggen.templates;
+package com.msggen.templates;
 
 import java.util.*;
 
 import org.json.simple.JSONObject;
 
-import com.kipsu.msggen.model.Company;
-import com.kipsu.msggen.model.Guests;
-import com.kipsu.msggen.model.Reservation;
+import com.msggen.model.Company;
+import com.msggen.model.Guests;
+import com.msggen.model.Reservation;
 
 import java.sql.Date;
 import java.sql.Timestamp;

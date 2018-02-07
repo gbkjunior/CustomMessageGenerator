@@ -1,4 +1,4 @@
-package com.kipsu.msggen.model;
+package com.msggen.model;
 import java.util.ArrayList;
 import org.json.simple.JSONObject;
 

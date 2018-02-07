@@ -1,4 +1,4 @@
-package com.kipsu.msggen.parser;
+package com.msggen.parser;
 /*import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;

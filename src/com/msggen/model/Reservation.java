@@ -1,4 +1,4 @@
-package com.kipsu.msggen.model;
+package com.msggen.model;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
